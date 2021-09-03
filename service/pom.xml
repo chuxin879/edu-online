@@ -46,6 +46,15 @@
              <artifactId>spring-cloud-starter-openfeign</artifactId>
          </dependency>-->
 
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -122,6 +131,22 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+
+
+
+
+
+
+
 
         <dependency>
             <groupId>com.guodong</groupId>

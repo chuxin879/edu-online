@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("eduservice/user")
+@RequestMapping("/eduservice/user")
 @CrossOrigin
 public class EduLoginController {
 
