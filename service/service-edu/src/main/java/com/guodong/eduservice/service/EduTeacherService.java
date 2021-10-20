@@ -15,4 +15,5 @@ import com.guodong.eduservice.entity.vo.TeacherQuery;
  */
 public interface EduTeacherService extends IService<EduTeacher> {
     void pageQuery(Page<EduTeacher> pageParam, TeacherQuery teacherQuery);
+
 }

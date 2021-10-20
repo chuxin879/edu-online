@@ -19,7 +19,7 @@ public class ExcelListener extends AnalysisEventListener<ReadData> {
 
     //一行 一行读取Excel内容
     @Override
-    public void invoke(ReadData user, AnalysisContext analysisCOntext){
+    public void invoke(ReadData user, AnalysisContext analysisContext){
         System.out.println("***"+user);
         list.add(user);
     }
@@ -39,7 +39,7 @@ public class ExcelListener extends AnalysisEventListener<ReadData> {
     //调用最终的读取
     public static void main (String[] args) throws Exception{
         String fileName = "D:\\test.xlsx";
-        //写法一
+        //写法一u
         //指定用那个classa去读，然后读取第一个sheet，文件陆会自动关闭
         EasyExcel.read(fileName, ReadData.class, new ExcelListener()).sheet().doRead();
 

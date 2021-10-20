@@ -1,6 +1,7 @@
 package com.guodong.eduservice.controller;
 
 
+import com.guodong.commonutils.R;
 import com.guodong.eduservice.service.EduSubjectService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * <p>
@@ -21,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @Api(description="课程分类管理")
-@CrossOrigin
+@CrossOrigin //跨域
 @RestController
 @RequestMapping("/eduservice/edu-subject")
 public class EduSubjectController {
@@ -32,8 +34,9 @@ public class EduSubjectController {
     @ApiOperation(value = "excel批量导入")
     @PostMapping("/addSubject")
     public R addSubject(MultipartFile multipartFile){
-        //
-        eduSubjectService.importSubjectData(gi)
+        eduSubjectService.importSubjectData(multipartFile, eduSubjectService);
+        return R.ok();
+
     }
 
 
