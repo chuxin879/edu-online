@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-10-20
  */
 public interface EduChapterService extends IService<EduChapter> {
-
+    
 }

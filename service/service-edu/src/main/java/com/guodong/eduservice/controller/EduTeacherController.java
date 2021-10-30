@@ -33,12 +33,12 @@ public class EduTeacherController {
     @Autowired
     private EduTeacherService eduTeacherService;
 
-    @ApiOperation("查找所有讲师")
-    @GetMapping("/findAll")
-    public List<EduTeacher> findALl(){
-        List<EduTeacher> eduTeachers = eduTeacherService.list(null);
-        return  eduTeachers;
-    }
+//    @ApiOperation("查找所有讲师")
+//    @GetMapping("/findAll")
+//    public List<EduTeacher> findALl(){
+//        List<EduTeacher> eduTeachers = eduTeacherService.list(null);
+//               return eduTeachers;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    urn  eduTeachers;
+//    }
 
     /**
      * 联系自己测试
@@ -64,7 +64,7 @@ public class EduTeacherController {
         }
     }
 
-
+    @ApiOperation("查找所有讲师")
     @PostMapping("/getTeacher/{page}/{limit}")
     public R getTeacher(@ApiParam(name = "page", value ="当前页码", required = true) @PathVariable Long page,
                         @ApiParam(name = "limit", value ="限制条数", required = true )@PathVariable Long limit,
