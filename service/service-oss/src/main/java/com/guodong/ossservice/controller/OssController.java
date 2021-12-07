@@ -29,4 +29,7 @@ public class OssController {
         return R.ok().message("上传成功").data((HashMap) data);
     }
 
+
+
+
 }

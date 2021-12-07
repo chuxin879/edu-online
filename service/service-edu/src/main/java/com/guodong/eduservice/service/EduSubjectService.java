@@ -2,7 +2,10 @@ package com.guodong.eduservice.service;
 
 import com.guodong.eduservice.entity.EduSubject;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.guodong.eduservice.entity.subject.OneSubject;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,4 +19,6 @@ public interface EduSubjectService extends IService<EduSubject> {
 //    void bathImport(MultiPartFile file);
 
     void importSubjectData(MultipartFile file, EduSubjectService subjectService);
+
+     List<OneSubject> getAllTreeSubject();
 }

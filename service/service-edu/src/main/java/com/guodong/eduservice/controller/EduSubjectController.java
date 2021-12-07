@@ -2,6 +2,7 @@ package com.guodong.eduservice.controller;
 
 
 import com.guodong.commonutils.R;
+import com.guodong.eduservice.entity.subject.OneSubject;
 import com.guodong.eduservice.service.EduSubjectService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -10,6 +11,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * <p>
@@ -35,6 +38,13 @@ public class EduSubjectController {
         eduSubjectService.importSubjectData(multipartFile, eduSubjectService);
         return R.ok();
 
+    }
+
+    @ApiOperation(value = "获取数状list")
+    @GetMapping("/getAllTreeSubject")
+    public R getAllTreeSubject(){
+        List<OneSubject> list = eduSubjectService.getAllTreeSubject();
+        return R.ok().data("list", list);
     }
 
     @ApiOperation(value="获取所有的课程")

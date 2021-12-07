@@ -36,7 +36,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         }
         baseMapper.selectPage(pageParam, queryWrapper);
 
-
-
     }
+
+
 }
